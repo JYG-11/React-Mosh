@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 
-export default class Counter extends Component {
+class Counter extends Component {
   state = {};
   render() {
-    return <h1>Counter App</h1>;
+    return (
+      <div>
+        <h1>Counter App</h1>
+        <button>Increment</button>
+      </div>
+    );
   }
 }
+
+export default Counter;
