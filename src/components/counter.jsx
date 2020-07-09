@@ -9,6 +9,11 @@ class Counter extends Component {
     count: 0,
   };
 
+  styles = {
+    fontSize: 30,
+    fontWeight: "bold",
+  };
+
   //render is a keyword that acts like a main
   //all methods are defined like this
   render() {
@@ -20,7 +25,9 @@ class Counter extends Component {
     //and display the result
     return (
       <div>
-        <span className="badge badge-primary m-2">{this.formatCount()}</span>
+        <span style={this.styles} className="badge badge-primary m-2">
+          {this.formatCount()}
+        </span>
         <button className="btn btn-secondary btn-small">Increment</button>
       </div>
     );
