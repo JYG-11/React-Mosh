@@ -18,11 +18,12 @@ class Counter extends Component {
     //between the curly braces and tags
     //you can even call on a function
     //and display the result
+    let classes = "badge m-2 ";
+    classes += this.state.count === 0 ? "badge-warning" : "badge-primary";
+
     return (
       <div>
-        <span style={{ fontSize: 50 }} className="badge badge-primary m-2">
-          {this.formatCount()}
-        </span>
+        <span className={classes}>{this.formatCount()}</span>
         <button className="btn btn-secondary btn-small">Increment</button>
       </div>
     );
