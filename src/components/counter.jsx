@@ -20,7 +20,7 @@ class Counter extends Component {
     //and display the result
     return (
       <div>
-        <h1>{this.formatCount()}</h1>
+        <span>{this.formatCount()}</span>
         <button>Increment</button>
       </div>
     );
@@ -28,7 +28,7 @@ class Counter extends Component {
 
   formatCount() {
     const { count } = this.state;
-    return count === 0 ? "Zero" : count;
+    return count === 0 ? <h1>Zero</h1> : count;
   }
 }
 
