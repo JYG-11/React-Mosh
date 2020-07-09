@@ -6,7 +6,7 @@ class Counter extends Component {
   //count is unique for each class instance
   //all instance variables are stored here
   state = {
-    count: 0,
+    count: 1,
   };
 
   //render is a keyword that acts like a main
@@ -18,8 +18,8 @@ class Counter extends Component {
     //between the curly braces and tags
     //you can even call on a function
     //and display the result
-    let classes = "badge m-2 ";
-    classes += this.state.count === 0 ? "badge-warning" : "badge-primary";
+    let classes = "badge m-2 badge-";
+    classes += this.state.count === 0 ? "warning" : "primary";
 
     return (
       <div>
