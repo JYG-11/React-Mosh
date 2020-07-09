@@ -6,7 +6,7 @@ class Counter extends Component {
   //count is unique for each class instance
   //all instance variables are stored here
   state = {
-    count: 0,
+    count: 1,
   };
 
   //render is a keyword that acts like a main
@@ -14,9 +14,11 @@ class Counter extends Component {
   render() {
     //if the value of count changes
     //the page will automatically update
+    //you can write any javascript expression
+    //between the curly braces and tags
     return (
       <div>
-        <h1>{this.state.count}</h1>
+        <h1>{this.state.count % 2 === 0 ? "Even" : "Odd"}</h1>
         <button>Increment</button>
       </div>
     );
