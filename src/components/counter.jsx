@@ -7,7 +7,7 @@ class Counter extends Component {
   //all instance variables are stored here
   state = {
     count: 1,
-    tags: ["tag1", "tag2", "tag3"],
+    tags: [],
   };
 
   renderTags() {
@@ -32,7 +32,12 @@ class Counter extends Component {
     //you can even call on a function
     //and display the result
 
-    return <div>{this.renderTags()}</div>;
+    return (
+      <div>
+        {this.renderTags()}
+        {this.state.tags.length === 0 && "Please create a new tag"}
+      </div>
+    );
   }
 }
 
