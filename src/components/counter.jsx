@@ -25,12 +25,15 @@ class Counter extends Component {
   //render is a keyword that acts like a main
   //all methods are defined like this
   render() {
-    //if the value of count changes
+    //if the length of tags changes
     //the page will automatically update
     //you can write any javascript expression
     //between the curly braces and tags
     //you can even call on a function
     //and display the result
+    //the boolean expression evaluates to the string
+    //this is because only the last value is looked at
+    //if all of the former values are truthy
 
     return (
       <div>
