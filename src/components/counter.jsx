@@ -7,6 +7,7 @@ class Counter extends Component {
   //all instance variables are stored here
   state = {
     count: 1,
+    tags: ["tag1", "tag2", "tag3"],
   };
 
   //render is a keyword that acts like a main
@@ -23,6 +24,11 @@ class Counter extends Component {
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button className="btn btn-secondary btn-small">Increment</button>
+        <ul>
+          {this.state.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
       </div>
     );
   }
